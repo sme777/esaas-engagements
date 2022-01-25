@@ -458,7 +458,7 @@ DEPENDENCIES
   omniauth-github
   omniauth-rails_csrf_protection
   paperclip (~> 5.2.1)
-  pg (< 1.0.0)
+  pg
   poltergeist
   puma (>= 4.3.1)
   rails (= 6.1.3)
