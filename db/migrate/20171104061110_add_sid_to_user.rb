@@ -1,4 +1,4 @@
-class AddSidToUser < ActiveRecord::Migration
+class AddSidToUser < ActiveRecord::Migration[6.1]
   def change
     add_column :users, :sid, :string
   end

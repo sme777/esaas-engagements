@@ -1,4 +1,4 @@
-class CreateMatchings < ActiveRecord::Migration
+class CreateMatchings < ActiveRecord::Migration[6.1]
   def change
     create_table :matchings do |t|
       t.timestamps null: false
@@ -9,7 +9,7 @@ class CreateMatchings < ActiveRecord::Migration
       t.text :result
       t.string :status, null: false, default: 'Collecting responses'
       t.text :last_edit_users
-      t.timestamps :last_edit_time
+      t.datetime :last_edit_time
     end
   end
 end

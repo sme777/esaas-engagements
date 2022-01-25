@@ -1,4 +1,4 @@
-class AddContactInfoToUsersAndOrgs < ActiveRecord::Migration
+class AddContactInfoToUsersAndOrgs < ActiveRecord::Migration[6.1]
   def change
     %w(address_line_1 address_line_2 city_state_zip).each do |field|
       add_column :orgs, field, :string, :null => true, :default => nil

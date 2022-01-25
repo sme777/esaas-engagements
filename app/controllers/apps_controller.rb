@@ -1,10 +1,11 @@
 class AppsController < ApplicationController
   before_action :set_app, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :auth_user?, :only => :index
+  skip_before_action :auth_user?, :only => :index
 
   # GET /apps
   # GET /apps.json
   def index
+    # byebug
     deploy_vet_map
     total_app = @total_deploy + @total_vet
     @current_user = User.find_by_id(session[:user_id])

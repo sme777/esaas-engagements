@@ -2,5 +2,9 @@
 
 
 %div.text-center
-  = link_to 'Log in with GitHub', '/auth/github', class: "btn btn-default"
+  = form_tag('/auth/github', method: 'post') do
+    %button{type: 'submit', class: "btn btn-default"}
+      Log in with GitHub
+
+  -# = link_to 'Log in with GitHub', '/auth/github', class: "btn btn-default"
 

@@ -1,5 +1,5 @@
 class MyProjectsController < ApplicationController
-    before_filter :app_exists_and_belongs_to_user?, except: :index
+    before_action :app_exists_and_belongs_to_user?, except: :index
     before_action :setup_form_vars, except: :index
 
     # GET /my_projects

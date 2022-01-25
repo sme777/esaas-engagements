@@ -1,4 +1,4 @@
-class CreatePendingFeedbacks < ActiveRecord::Migration
+class CreatePendingFeedbacks < ActiveRecord::Migration[6.1]
   def change
     create_table :pending_feedbacks do |t|
       t.integer :engagement_id

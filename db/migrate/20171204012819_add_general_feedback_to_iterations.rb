@@ -1,4 +1,4 @@
-class AddGeneralFeedbackToIterations < ActiveRecord::Migration
+class AddGeneralFeedbackToIterations < ActiveRecord::Migration[6.1]
   def change
     add_column :iterations, :general_feedback, :string
   end

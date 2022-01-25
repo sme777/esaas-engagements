@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
-  before_filter :logged_in?
-  before_filter :check_student
+  before_action :logged_in?
+  before_action :auth_user?
+  before_action :check_student
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -10,6 +11,7 @@ class ApplicationController < ActionController::Base
   helper_method :get_pending_requests_count
   helper_method :get_pending_iteration_feedbacks
   helper_method :get_reviewed_apps
+  
   private
   @@name_path = "/my_projects"
 

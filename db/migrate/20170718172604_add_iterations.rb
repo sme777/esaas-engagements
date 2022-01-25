@@ -1,4 +1,4 @@
-class AddIterations < ActiveRecord::Migration
+class AddIterations < ActiveRecord::Migration[6.1]
   def change
     create_table :iterations, :force => :cascade do |t|
       t.belongs_to :engagement

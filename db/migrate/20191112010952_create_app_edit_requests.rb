@@ -1,4 +1,4 @@
-class CreateAppEditRequests < ActiveRecord::Migration
+class CreateAppEditRequests < ActiveRecord::Migration[6.1]
   def change
     create_table :app_edit_requests, id: false do |t|
       t.primary_key :app_id
