@@ -1,5 +1,5 @@
 class PendingFeedbackController < ApplicationController
-	skip_before_filter :logged_in?
+	skip_before_action :logged_in?
 
 	def form
 		@engagement = Engagement.find(params[:engagement_id])

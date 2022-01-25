@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
-  skip_before_filter :logged_in?, :only => :public_search
+  skip_before_action :logged_in?, :only => :public_search
 
   def search
     keyword = params["keyword"]

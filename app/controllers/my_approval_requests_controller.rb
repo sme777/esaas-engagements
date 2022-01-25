@@ -1,5 +1,5 @@
 class MyApprovalRequestsController < ApplicationController
-  append_after_filter :must_be_coach
+  append_after_action :must_be_coach
   before_action :set_my_approval_request, only: [:show, :update]
 
   # GET /my_approval_requests
