@@ -21,6 +21,13 @@ coach = User.create(email: 'fox@cs.berekley.edu') do |fox|
 	fox.github_uid = 'fox'
 	fox.type_user = 'Coach'
 end
+
+coach = User.create(email: 'samson.petrosyan8@gmail.com') do |fox|
+	fox.name = "Samson Petrosyan"
+	fox.github_uid = 'sme777'
+	fox.type_user = 'Coach'
+end
+
 cs169 = Org.find_or_create_by(name: 'UCB CS169 Fox') do |ucbcs169|
 	ucbcs169.description = 'CS 169 at UC Berkeley'
 	ucbcs169.url = "http://cs169.saas-class.org"
