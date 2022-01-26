@@ -6,6 +6,7 @@ class SessionController < ApplicationController
   
   
   def create
+    # byebug
     github_uid = request.env["omniauth.auth"]["info"]["nickname"]
     if (user = User.find_by_github_uid(github_uid))
       session[:user_id] = user.id
@@ -23,7 +24,8 @@ class SessionController < ApplicationController
   end
 
   def failure
-    flash[:alert] = 'Authentication failed, please try again.'
+    # byebug
+    flash[:alert] = "Authentication failed, please try again. #{request}"
     flash[:alert] += params[:message] if params[:message]
     redirect_to login_path
   end
