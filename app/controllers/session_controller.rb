@@ -25,7 +25,7 @@ class SessionController < ApplicationController
 
   def failure
     # byebug
-    flash[:alert] = "Authentication failed, please try again. #{request}"
+    flash[:alert] = "Authentication failed, please try again. #{params}"
     flash[:alert] += params[:message] if params[:message]
     redirect_to login_path
   end

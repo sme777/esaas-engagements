@@ -5,6 +5,7 @@ ruby '2.5.9'
 
 gem 'rails', '4.2.11.1'
 gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection', '~> 0.1.2'
 gem 'select2-rails', '~> 4.0', '>= 4.0.3'
 gem 'json'
 gem 'figaro'
